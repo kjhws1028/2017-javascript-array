@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <script type="text/javascript">
         function check_string() {
-          // TODO : 여기에 여러분이 직접 코딩을 해주세요.          
+            var lcount = 0;
+            var rcount = 0;                   
+            for (var i=0;i<arguments[0].length;i++) {
+                if (arguments[0].charAt(i) == '(') {
+                    lcount++;                    
+                } else rcount++;
+            }           
+            if (lcount==rcount) {
+                return true;
+            } 
+	    else return false;          
           return true;
         }
 
